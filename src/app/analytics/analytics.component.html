@@ -1,0 +1,31 @@
+<div class="col-xs col-md-6">
+  <br>
+  <h3><i class="fab fa-google"></i>oogle Analytics Tracking</h3><br>
+  <button type="submit" id="submit" class="btn btn-primary btn-lg" (click)="setData()">
+    <i class="fas fa-keyboard"></i> &nbsp; <i class="fas fa-plus"></i></button><br><br>
+  <form id="signup-form">
+    <div class="form-group">
+      <input type="text" class="form-control" id="name" aria-describedby="textHelp" placeholder="name" [(ngModel)]="data.name"
+        name="name" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="company" aria-describedby="textHelp" placeholder="company"
+        [(ngModel)]="data.company" name="company" required>
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" id="phone" aria-describedby="textHelp" placeholder="phone" [(ngModel)]="data.phone"
+        name="phone" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="email" aria-describedby="textHelp" placeholder="email" [(ngModel)]="data.email"
+        name="email" required>
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" type="textarea" id="help" name="help" placeholder="text" [(ngModel)]="data.help"
+        name="text" maxlength="140" rows="7"></textarea>
+    </div>
+    <button ga-on="click" ga-event-category="form-analytics" ga-event-action="submit" type="submit" id="submit" class="btn btn-primary"
+      (click)="send(data.name, data.company, data.phone, data.email, data.help)">Submit</button><br><br>
+    <span id="message"></span>
+  </form>
+</div>

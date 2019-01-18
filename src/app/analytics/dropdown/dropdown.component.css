@@ -1,0 +1,23 @@
+.select-style{
+    position: absolute;
+    border-radius: 0px;
+    border-color: #a9a9a9;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    width: 400px;
+    height: 35px;
+}
+
+.select-style-items{
+    width: 400px;   
+    cursor: pointer; 
+}
+
+.select-style-items :hover{
+    background-color: #f1f1f1
+}

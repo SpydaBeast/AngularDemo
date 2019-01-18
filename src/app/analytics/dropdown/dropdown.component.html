@@ -1,0 +1,85 @@
+<br><br><br>
+<div class="row col-md-12" style="padding-bottom:15px;">
+  <div class="col-md-5">
+      <button class="select-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false"> {{ currentCounty }}<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu select-style-items">
+      <li ga-on="click" ga-event-category="dropdown-analytics-adams" ga-event-action="click" (click)="setCounty(adams)">{{ adams }}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-asotin" ga-event-action="click" (click)="setCounty(asotin)">{{ asotin }}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-benton" ga-event-action="click" (click)="setCounty(benton)">{{benton}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-chelan" ga-event-action="click" (click)="setCounty(chelan)">{{chelan}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-clallam" ga-event-action="click" (click)="setCounty(clallam)">{{clallam}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-clark" ga-event-action="click" (click)="setCounty(clark)">{{clark}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-columbia" ga-event-action="click" (click)="setCounty(columbia)">{{columbia}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-cowlitz" ga-event-action="click" (click)="setCounty(cowlitz)">{{cowlitz}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-douglas" ga-event-action="click" (click)="setCounty(douglas)">{{douglas}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-ferry" ga-event-action="click" (click)="setCounty(ferry)">{{ferry}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-franklin" ga-event-action="click" (click)="setCounty(franklin)">{{franklin}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-garfield" ga-event-action="click" (click)="setCounty(garfield)">{{garfield}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-grant" ga-event-action="click" (click)="setCounty(grant)">{{grant}}</li>
+    </ul>
+  </div>
+  <br><br><br>
+
+  <div class="col-md-7">
+    <select name="County" ga-on="click" ga-event-action="click" style="width:400px; padding:5px;">
+      <option value="Adams"><a>Adams</a></option>
+      <option value="Asotin">Asotin</option>
+      <option value="Benton">Benton</option>
+      <option value="Chelan"><a>Chelan</a></option>
+      <option value="Clallam">Clallam</option>
+      <option value="Clark">Clark</option>
+      <option value="Columbia">Columbia</option>
+      <option value="Cowlitz">Cowlitz</option>
+      <option value="Douglas">Douglas</option>
+      <option value="Ferry">Ferry</option>
+      <option value="Franklin">Franklin</option>
+      <option value="Garfield">Garfield</option>
+      <option value="Grant">Grant</option>
+      <option value="Grays Harbor">Grays Harbor</option>
+      <option value="Island">Island</option>
+      <option value="Jefferson">Jefferson</option>
+      <option value="King">King</option>
+      <option value="Kitsap">Kitsap</option>
+      <option value="Kittitas">Kittitas</option>
+      <option value="Klickitat">Klickitat</option>
+      <option value="Lewis">Lewis</option>
+      <option value="Lincoln">Lincoln</option>
+      <option value="Mason">Mason</option>
+      <option value="Okanogan">Okanogan</option>
+      <option value="Pacific">Pacific</option>
+      <option value="Pend Oreille">Pend Oreille</option>
+      <option value="Pierce">Pierce</option>
+      <option value="San Juan">San Juan</option>
+      <option value="Skagit">Skagit</option>
+      <option value="Skamania">Skamania</option>
+      <option value="Snohomish">Snohomish</option>
+      <option value="Spokane">Spokane</option>
+      <option value="Stevens">Stevens</option>
+      <option value="Thurston">Thurston</option>
+      <option value="Wahkiakum">Wahkiakum</option>
+      <option value="Walla Walla">Walla Walla</option>
+      <option value="Whatcom">Whatcom</option>
+      <option value="Whitman">Whitman</option>
+      <option value="Yakima">Yakima</option>
+    </select>
+  </div>
+  <br><br><br>
+
+  <!-- <div class="col-md-7">
+      <select 
+        name="County"   
+        [(ngModel)]="selectedCounty"    
+        ga-on="click" 
+        ga-event-action="click" 
+        ga-event-category= ""
+        style="width:400px; padding:5px;">
+          <option           
+            *ngFor="let county of counties"
+            [ngValue]="county.label">       
+            {{ county.label }}
+          </option>
+      </select>
+    </div> -->
+</div>

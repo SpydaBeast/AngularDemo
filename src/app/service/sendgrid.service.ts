@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class SendgridService {
 
-  private url = 'https://us-central1-probalance-214005.cloudfunctions.net/httpEmail?sg_key=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';
+  private url = 'https://us-central1-probalance-214005.cloudfunctions.net/httpEmail?<<API_Key>>';
 
 constructor(private _http: HttpClient) { }
 

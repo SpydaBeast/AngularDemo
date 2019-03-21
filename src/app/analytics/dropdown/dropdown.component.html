@@ -5,8 +5,8 @@
       aria-expanded="false"> {{ currentCounty }}<span class="caret"></span>
     </button>
     <ul class="dropdown-menu select-style-items">
-      <li ga-on="click" ga-event-category="dropdown-analytics-adams" ga-event-action="click" (click)="setCounty(adams)">{{ adams }}</li>
-      <li ga-on="click" ga-event-category="dropdown-analytics-asotin" ga-event-action="click" (click)="setCounty(asotin)">{{ asotin }}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-adams" ga-event-action="click" (click)="setCounty(adams)">{{adams}}</li>
+      <li ga-on="click" ga-event-category="dropdown-analytics-asotin" ga-event-action="click" (click)="setCounty(asotin)">{{asotin}}</li>
       <li ga-on="click" ga-event-category="dropdown-analytics-benton" ga-event-action="click" (click)="setCounty(benton)">{{benton}}</li>
       <li ga-on="click" ga-event-category="dropdown-analytics-chelan" ga-event-action="click" (click)="setCounty(chelan)">{{chelan}}</li>
       <li ga-on="click" ga-event-category="dropdown-analytics-clallam" ga-event-action="click" (click)="setCounty(clallam)">{{clallam}}</li>
@@ -23,10 +23,10 @@
   <br><br><br>
 
   <div class="col-md-7">
-    <select name="County" ga-on="click" ga-event-action="click" style="width:400px; padding:5px;">
-      <option value="Adams"><a>Adams</a></option>
-      <option value="Asotin">Asotin</option>
-      <option value="Benton">Benton</option>
+    <select ga-on="click" ga-event-category= "The Old Way" ga-event-action="click" style="width:400px; padding:5px;">
+      <option ga-on="click" ga-event-category= "rep_adams" ga-event-action="click"  value="Adams"><a>Adams</a></option>
+      <option ga-on="click" ga-event-category= "rep_asotin" ga-event-action="click"  value="Asotin">Asotin</option>
+      <option  ga-on="click" ga-event-category= "rep_benton" ga-event-action="click" value="Benton">Benton</option>
       <option value="Chelan"><a>Chelan</a></option>
       <option value="Clallam">Clallam</option>
       <option value="Clark">Clark</option>
@@ -81,5 +81,68 @@
             {{ county.label }}
           </option>
       </select>
-    </div> -->
-</div>
+    </div>
+</div> -->
+
+<br><br><br>
+    <div ng-app="myApp" ng-controller="myCtrl">
+            <div class="row col-md-12" style="padding-bottom:15px;">
+                <div class="col-md-5"><b translate="RepModal.County"></b></div>
+
+                <div class="col-md-7 dropdown">
+                    <button class="select-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{
+                        currentCounty2 }}<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu select-style-items">
+                        <li ga-on="click" ga-event-category="dropdown-analytics-adams" ga-event-action="click" ng-click="currentCounty2 = adams2">{{adams2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-asotin" ga-event-action="click" ng-click="currentCounty2 = asotin2">{{asotin2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-benton" ga-event-action="click" ng-click="currentCounty2 = benton2">{{benton2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-chelan" ga-event-action="click" ng-click="currentCounty2 = chelan2">{{chelan2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-clallam" ga-event-action="click" ng-click="currentCounty2 = clallam2">{{clallam2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-clark" ga-event-action="click" ng-click="currentCounty2 = clark2">{{clark2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-columbia" ga-event-action="click" ng-click="currentCounty2 = columbia2">{{columbia2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-cowlitz" ga-event-action="click" ng-click="currentCounty2 = cowlitz2">{{cowlitz2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-douglas" ga-event-action="click" ng-click="currentCounty2 = douglas2">{{douglas2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-ferry" ga-event-action="click" ng-click="currentCounty2 = ferry2">{{ferry2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-franklin" ga-event-action="click" ng-click="currentCounty2 = franklin2">{{franklin2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-garfield" ga-event-action="click" ng-click="currentCounty2 = garfield2">{{garfield2}}</li>
+                        <li ga-on="click" ga-event-category="dropdown-analytics-grant" ga-event-action="click" ng-click="currentCounty2 = grant2">{{grant2}}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+    <br /><br /><br />
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+        $scope.counties2 = [
+            "Adams","Asotin",
+            "Benton","Chelan",
+            "Clallam","Clark",
+            "Columbia","Cowlitz",
+            "Douglas","Ferry",
+            "Franklin","Garfield","Grant"
+        ];
+  
+        $scope.currentCounty2 = $scope.counties2[0];
+        $scope.adams2 = $scope.counties2[0];
+        $scope.asotin2 = $scope.counties2[1];
+        $scope.benton2 = $scope.counties2[2];
+        $scope.chelan2 = $scope.counties2[3];
+        $scope.clallam2 = $scope.counties2[4];
+        $scope.clark2 = $scope.counties2[5];
+        $scope.columbia2 = $scope.counties2[6];
+        $scope.cowlitz2 = $scope.counties2[7];
+        $scope.douglas2 = $scope.counties2[8];
+        $scope.ferry2 = $scope.counties2[9];
+        $scope.franklin2 = $scope.counties2[10];
+        $scope.garfield2 = $scope.counties2[11];
+        $scope.grant2 = $scope.counties2[12];
+    });
+</script>

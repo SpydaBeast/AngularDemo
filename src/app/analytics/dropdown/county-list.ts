@@ -1,7 +1,7 @@
 import { County } from './county';
 
 export const COUNTIES: County[] = [
-  { id: 1, label: "Adams"},
+  { id: 1, label: 'Adams'},
   { id: 2, label: 'Asotin' },
   { id: 3, label: 'Benton' },
   { id: 4, label: 'Chelan' },
